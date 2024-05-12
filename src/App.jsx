@@ -1,17 +1,46 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
+import HomePage from './pages/HomePage'
+import Armament from './pages/Armament.jsx'
+import Contact from './pages/Contact.jsx'
+import supabase from './supabase/config.js'
+import { Routes, Route, Link } from 'react-router-dom'
+
 
 function App() {
+
+  const [characters, setCharacters] = useState([])
+
+  const getCharacters = async () => {
+    const { data, error } = await supabase.from("characters").select();
+    if (error) {
+      console.log("there was an error ", error);
+      return;
+    }
+    else {
+      console.log("data fetched succesfully: ", data);
+      setCharacters(data);
+    }
+  }
+
+  useEffect(() => {
+    getCharacters();
+  }, [])
 
   return (
     <>
       <section className="NavBar">
-        <h2>Home Page</h2>
+        <Link to="/"><h2>HomePage</h2></Link>
         <h2>Races</h2>
-        <h2>Store</h2>
-        <h2>Contact</h2>
+        <Link to="/Store"><h2>Store</h2></Link>
+        <Link to="/Contact"><h2>Contact</h2></Link>
         <img src="" alt="Game Icon" />
       </section>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/Store' element={<Armament />}/>
+        <Route path='/Contact' element={<Contact />} />
+      </Routes>
 
       <section className="Footer">
         <div>

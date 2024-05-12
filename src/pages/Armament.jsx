@@ -16,7 +16,7 @@ function Armament() {
                     <h3>Description: </h3>
                 </div>
 
-                <img src="" alt="" />
+                <img src="" alt="image of the Armament" />
             </div>
         </>
     )

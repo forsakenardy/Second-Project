@@ -9,7 +9,7 @@ function Insectoid() {
                 <li><h3>Description: </h3></li>
                 <li><h3>Background History: </h3></li>
             </ul>
-            <img src="" alt="" />
+            <img src="" alt="Image of the Insect" />
         </div>
         </>
     )
