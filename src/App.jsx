@@ -5,6 +5,8 @@ import Armament from './pages/Armament.jsx'
 import Contact from './pages/Contact.jsx'
 import supabase from './supabase/config.js'
 import { Routes, Route, Link } from 'react-router-dom'
+import Humanoid from './pages/Humanoid.jsx'
+import Insectoid from './pages/Insectoid.jsx'
 
 
 function App() {
@@ -36,10 +38,16 @@ function App() {
         <Link to="/Contact"><h2>Contact</h2></Link>
         <img src="" alt="Game Icon" />
       </section>
+      <div className='races-menu'>
+        <Link to="/humanoid"><h3>Humanoid</h3></Link>
+        <Link to="/insectoid"><h3>Insectoid</h3></Link>
+        </div>
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/Store' element={<Armament />}/>
+        <Route path='/Store' element={<Armament />} />
         <Route path='/Contact' element={<Contact />} />
+        <Route path='/humanoid' element={<Humanoid />} />
+        <Route path='/insectoid' element={<Insectoid />} />
       </Routes>
 
       <section className="Footer">
