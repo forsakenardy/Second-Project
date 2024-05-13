@@ -14,8 +14,6 @@ function Humanoid({ characters }) {
                                     <li><h2 >Description:</h2> <h3 className="info">{character.description}</h3></li>
                                     <li><h2 >Background History:</h2><h3 className="info">{character['Background-Story']}</h3></li>
                                 </ul>
-                                
-                               
                                 </div>
                                 <img className="humanoid-image" src={character.image} alt="" />
 

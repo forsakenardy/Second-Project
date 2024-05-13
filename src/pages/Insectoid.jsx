@@ -1,18 +1,32 @@
 import supabase from "../supabase/config";
 
-function Insectoid() {
+function Insectoid({insectoids}) {
     return (
         <>
-        <div>
-            <ul>
-                <li><h3>name: </h3></li>
-                <li><h3>Description: </h3></li>
-                <li><h3>Background History: </h3></li>
-            </ul>
-            <img src="" alt="Image of the Insect" />
-        </div>
+            {
+                insectoids.map((insectoid) => {
+                    return (
+                        <>
+                            <div  className="humanoid-card">
+                                <div>
+                                <h1 className="character-name">{insectoid.name}</h1>
+                                <ul className="info-card">
+                                    <li><h2 >Description:</h2> <h3 className="info">{insectoid.description}</h3></li>
+                                    <li><h2 >Background History:</h2><h3 className="info">{insectoid['Background-Story']}</h3></li>
+                                </ul>
+                                </div>
+                                <img className="humanoid-image" src={insectoid.image} alt="" />
+
+                            </div>
+                        </>
+
+                    )
+                }
+                )
+            }
         </>
     )
 }
+
 
 export default Insectoid

@@ -11,6 +11,7 @@ import Insectoid from './pages/Insectoid.jsx'
 
 function App() {
 
+  const [insectoids, setInsectoids] = useState([])
   const [characters, setCharacters] = useState([])
   const [isPressed, setIsPressed] = useState(false);
 
@@ -29,9 +30,23 @@ function App() {
       setCharacters(characters);
     }
   }
+  const getInsectoids = async () => {
+    const { data:insectoids, error } = await supabase.from("insectoids").select('*');
+    if (error) {
+      console.log("there was an error ", error);
+      return;
+    }
+    else {
+      console.log("data fetched succesfully: ", insectoids);
+      setInsectoids(insectoids);
+    }
+  }
+
 
   useEffect(() => {
     getCharacters();
+    getInsectoids();
+  
   }, [])
 
   return (
@@ -52,7 +67,7 @@ function App() {
         <Route path='/Store' element={<Armament />} />
         <Route path='/Contact' element={<Contact />} />
         <Route path='/humanoid' element={<Humanoid characters={characters}/>} />
-        <Route path='/insectoid' element={<Insectoid />} />
+        <Route path='/insectoid' element={<Insectoid insectoids={insectoids} />} />
       </Routes>
 
       <section className="Footer">
