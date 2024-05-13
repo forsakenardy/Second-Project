@@ -4,7 +4,7 @@ function HomePage() {
     return (
         
         <>
-            <section className="Main Info">
+            <section className="main-info">
                 <h1>Chain of Ascension</h1>
                 <p>"Chain of Ascension" te sumerge en un universo futurista donde la humanidad se enfrenta a una amenaza alienígena implacable: una colmena insectoide liderada por la formidable Matriarca Ziraxis. En este juego de acción y estrategia, te unirás a la lucha como un valiente soldado humanoide o te aventurarás en el corazón de la colmena como un intrépido guerrero insectoide.
 
