@@ -12,6 +12,11 @@ import Insectoid from './pages/Insectoid.jsx'
 function App() {
 
   const [characters, setCharacters] = useState([])
+  const [isPressed, setIsPressed] = useState(false);
+
+  const toggleClass = () => {
+    setIsPressed((prevState) => !prevState);
+  };
 
   const getCharacters = async () => {
     const { data, error } = await supabase.from("characters").select();
@@ -33,14 +38,14 @@ function App() {
     <>
       <section className="NavBar">
         <Link to="/"><h2>HomePage</h2></Link>
-        <h2>Races</h2>
+        <button onClick={toggleClass} className='races-button'><h2>Races</h2></button>
         <Link to="/Store"><h2>Store</h2></Link>
         <Link to="/Contact"><h2>Contact</h2></Link>
         <img src="" alt="Game Icon" />
       </section>
-      <div className='races-menu'>
-        <Link to="/humanoid"><h3>Humanoid</h3></Link>
-        <Link to="/insectoid"><h3>Insectoid</h3></Link>
+      <div className={isPressed ? 'races-menu' : 'menu-displayed'}>
+        <Link to="/humanoid"><h3 className='races'>Humanoid</h3></Link>
+        <Link to="/insectoid"><h3 className='races'>Insectoid</h3></Link>
         </div>
       <Routes>
         <Route path='/' element={<HomePage />} />
