@@ -42,12 +42,23 @@ function App() {
       setInsectoids(insectoids);
     }
   }
+  const getArmament = async () => {
+    const { data:armament, error } = await supabase.from("armament").select('*');
+    if (error) {
+      console.log("there was an error ", error);
+      return;
+    }
+    else {
+      console.log("data fetched succesfully: ", armament);
+      setArmament(armament);
+    }
+  }
 
 
   useEffect(() => {
     getCharacters();
     getInsectoids();
-  
+    getArmament();
   }, [])
 
   return (
@@ -65,7 +76,7 @@ function App() {
         </div>
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/Store' element={<Armament />} />
+        <Route path='/Store' element={<Armament armament={armament} />} />
         <Route path='/Contact' element={<Contact />} />
         <Route path='/humanoid' element={<Humanoid characters={characters}/>} />
         <Route path='/insectoid' element={<Insectoid insectoids={insectoids} />} />

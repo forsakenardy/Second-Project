@@ -1,6 +1,7 @@
 import supabase from "../supabase/config"
 
 function HomePage() {
+    
     return (
         
         <>
