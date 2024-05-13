@@ -16,7 +16,9 @@
   justify-content: space-between;
   padding-left: 3vw;
 }
-
+.NavBar h2 {
+  font-size: 3vh;
+}
 .Footer {
   width: 100vw;
   height: 10vh;
@@ -65,6 +67,7 @@
   }
 }
 .races {
+  font-size: 2.5vh;
   margin-left: 1vw;
   animation-duration: 1s;
   animation-delay: 0.5s;
@@ -77,4 +80,36 @@
   to {
     color: #535bf2;
   }
+}
+.humanoid-card {
+  margin-top: 15vh;
+  margin-left: 1vw;
+  width: 98vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30vh;
+  gap: 10vh;
+  box-shadow: 0px 28px 45px -41px rgba(255,255,255,1);
+}
+.description {
+  height: 80vh;
+}
+.humanoid-image {
+  height: 80vh;
+  
+}
+.character-name {
+  margin-left: 17vw;
+  font-size: 10vh;
+}
+.info{
+  font-size: 3vh;
+}
+.info-card {
+  overflow: auto;
+  height: 45vh;
+}
+.info-card h2{
+  font-size: 5vh;
 }

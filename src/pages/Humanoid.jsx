@@ -1,18 +1,33 @@
 import supabase from "../supabase/config";
 
-function Humanoid() {
+function Humanoid({ characters }) {
     return (
         <>
-        <div>
-            <ul>
-                <li><h3>name: </h3></li>
-                <li><h3>Description: </h3></li>
-                <li><h3>Background History: </h3></li>
-            </ul>
-            <img src="" alt="" />
-        </div>
+            {
+                characters.map((character) => {
+                    return (
+                        <>
+                            <div key={character.id} className="humanoid-card">
+                                <div>
+                                <h1 className="character-name">{character.name}</h1>
+                                <ul className="info-card">
+                                    <li><h2 >Description:</h2> <h3 className="info">{character.description}</h3></li>
+                                    <li><h2 >Background History:</h2><h3 className="info">{character['Background-Story']}</h3></li>
+                                </ul>
+                                
+                               
+                                </div>
+                                <img className="humanoid-image" src={character.image} alt="" />
+
+                            </div>
+                        </>
+
+                    )
+                }
+                )
+            }
         </>
     )
 }
 
-export default Humanoid
+export default Humanoid;

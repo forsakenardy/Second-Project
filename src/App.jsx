@@ -19,14 +19,14 @@ function App() {
   };
 
   const getCharacters = async () => {
-    const { data, error } = await supabase.from("characters").select();
+    const { data:characters, error } = await supabase.from("characters").select('*');
     if (error) {
       console.log("there was an error ", error);
       return;
     }
     else {
-      console.log("data fetched succesfully: ", data);
-      setCharacters(data);
+      console.log("data fetched succesfully: ", characters);
+      setCharacters(characters);
     }
   }
 
@@ -51,7 +51,7 @@ function App() {
         <Route path='/' element={<HomePage />} />
         <Route path='/Store' element={<Armament />} />
         <Route path='/Contact' element={<Contact />} />
-        <Route path='/humanoid' element={<Humanoid />} />
+        <Route path='/humanoid' element={<Humanoid characters={characters}/>} />
         <Route path='/insectoid' element={<Insectoid />} />
       </Routes>
 
