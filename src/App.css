@@ -80,9 +80,9 @@
   border-bottom-left-radius: 1vw;
   border-bottom-right-radius: 1vw;
   top: 10vh;
-  left: 561.5px;
+  left: 155px;
   height: 20%;
-  width: 14%;
+  width: 13%;
   background-color: rgb(74, 73, 73);
   box-shadow: -8px 5px 15px -5px rgba(0,0,0,0.6);
   animation-duration: 0.5s;
@@ -91,12 +91,12 @@
 @keyframes slidein {
   from {
     height: 0;
-    width: 14%;
+    width: 13%;
   }
 
   to {
     height: 20vh;
-    width: 14%;
+    width: 13%;
   }
 }
 .races {
@@ -133,8 +133,8 @@
   
 }
 .character-name {
-  margin-left: 17vw;
-  font-size: 8vh;
+  margin-left:2vw;
+  font-size: 6.7vh;
   font-family: "Chakra Petch", sans-serif;
   font-weight: 400;
   font-style: normal;
