@@ -5,6 +5,7 @@
   font-style: normal;
   background-color: rgb(28, 28, 28) ;
   color: grey;
+  cursor: pointer;
 }
 .NavBar {
   font-family: "Chakra Petch", sans-serif;
@@ -46,9 +47,21 @@
 }
 .Footer {
   width: 100vw;
-  height: 10vh;
+  height: 20vh;
   background-color:rgb(28, 28, 28);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  margin-left: 15vw;
+  gap: 80px;
+}
+.icons-footer {
+  width: 3vw;
+  cursor: pointer;
 }
 .races-menu {
   display: none;
@@ -139,10 +152,11 @@
   font-size: 5vh;
 }
 
-.full-armament-page {
-  width: 100vw;
+.full-armament-page{
+  width: 92vw;
   height: 100vh;
   margin-top: 15vh;
+  margin-left: 4vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -171,4 +185,6 @@
   width: 20vw;
   font-size: 1.4vw;
 }
-
+.armament-content{
+  width: 20vw;
+}

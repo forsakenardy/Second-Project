@@ -88,9 +88,14 @@ function App() {
       </Routes>
 
       <section className="Footer">
-        <div>
-          <h3>My Footer</h3>
-        </div>
+
+          <h3>&copy; 2024 Developed by Arnaldo</h3>
+          <div className='footer-icons'>
+            <img className='icons-footer' src="src\assets\images\OIP-removebg-preview.png" alt="" />
+            <img className='icons-footer' src="src\assets\images\OIP__1_-removebg-preview.png" alt="" />
+            <img className='icons-footer' src="src\assets\images\Gmail-Logo-PNG-HD-1.png" alt="" />
+          </div>
+
       </section>
     </>
   )
