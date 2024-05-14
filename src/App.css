@@ -192,3 +192,31 @@
 .armament-content{
   width: 20vw;
 }
+.armament-info-buttons {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.armament-info-buttons div {
+  display: flex;
+  flex-direction: row;
+  gap: 20%;
+}
+.prevnext {
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid blue;
+  width: 120px;
+  height: 30px;
+  font-size: 20px;
+}
+.buy  {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: brown;
+  border: 2px solid black;
+  width: 110px;
+  height: 30px;
+  border-radius: 10px;
+}
