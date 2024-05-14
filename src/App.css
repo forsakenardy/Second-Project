@@ -220,7 +220,10 @@
   height: 30px;
   border-radius: 10px;
 }
-
+.user-page {
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
 .user-card {
   border: 2px solid white;
   border-radius: 10px;
@@ -229,7 +232,7 @@
   height: 7vh;
   display: flex;
   flex-direction: row;
-  gap: 240px;
+  gap: 200px;
 }
 .user-name {
   width: 80px;
@@ -242,4 +245,10 @@
 }
 .user-img {
   margin-left: 10px;
+}
+.user-lvl {
+  width: 50px;
+}
+.delete-user{
+  margin-right: 10px;
 }
