@@ -71,7 +71,7 @@ function App() {
           <Link to="/Contact"><h2>Contact</h2></Link>
           <button onClick={toggleClass} className='races-button'><h2>Races</h2></button>
         </div>
-        <img className='my-logo' src="src\assets\images\logo.png" alt="Game Icon" />
+        <img className='my-logo' src="https://i.ibb.co/YcWStDk/logo.png" alt="Game Icon" />
       </section>
       <div className={isPressed ? 'menu-displayed' : 'races-menu'}>
         <Link to="/humanoid"><h3 className='races'>Humanoid</h3></Link>
@@ -91,9 +91,9 @@ function App() {
 
           <h3>&copy; 2024 Developed by Arnaldo Mera Rojas</h3>
           <div className='footer-icons'>
-            <img className='icons-footer' src="src\assets\images\OIP-removebg-preview.png" alt="" />
-            <img className='icons-footer' src="src\assets\images\OIP__1_-removebg-preview.png" alt="" />
-            <img className='icons-footer' src="src\assets\images\Gmail-Logo-PNG-HD-1.png" alt="" />
+            <img className='icons-footer' src="https://i.ibb.co/NpYjCtr/Gmail-Logo-PNG-HD-1.png" alt="" />
+            <img className='icons-footer' src="https://i.ibb.co/GCyS0CC/OIP-1-removebg-preview.png" alt="" />
+            <img className='icons-footer' src="https://i.ibb.co/L9w8D8D/OIP-removebg-preview.png" alt="" />
           </div>
 
       </section>
