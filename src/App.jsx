@@ -73,9 +73,9 @@ function App() {
         </div>
         <img className='my-logo' src="https://i.ibb.co/YcWStDk/logo.png" alt="Game Icon" />
       </section>
-      <div className={isPressed ? 'menu-displayed' : 'races-menu'}>
-        <Link to="/humanoid"><h3 onClick={toggleClass} className='races'>Humanoid</h3></Link>
-        <Link to="/insectoid"><h3 onClick={toggleClass} className='races'>Insectoid</h3></Link>
+      <div onClick={toggleClass} className={isPressed ? 'menu-displayed' : 'races-menu'}>
+        <Link to="/humanoid"><h3 className='races'>Humanoid</h3></Link>
+        <Link to="/insectoid"><h3  className='races'>Insectoid</h3></Link>
       </div>
       <Routes>
         <Route path='/' element={<HomePage />} />
