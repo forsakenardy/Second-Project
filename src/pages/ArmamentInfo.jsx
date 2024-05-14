@@ -24,7 +24,7 @@ function ArmamentInfo({ armament }) {
                         <li><h3>DPS: {weaponCard.dps}</h3></li>
                         <h3>Description: {weaponCard.description}</h3>
                     </ul>
-
+                    <button className="buy">Buy</button>
                 </div>
                 <img className="humanoid-image" src={weaponCard.image} alt="imagen del Armamento" />
             </div>

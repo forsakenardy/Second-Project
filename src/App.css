@@ -38,12 +38,16 @@
   font-weight: 400;
   font-style: normal;
   font-size: 10vh;
+  margin-left: 8vw;
+  margin-top: 15vh;
 }
 .main-info p {
+  width: 95vw;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 200;
   font-style: normal;
   font-size: 3vh;
+  margin-left: 2vw;
 }
 .Footer {
   width: 100vw;
