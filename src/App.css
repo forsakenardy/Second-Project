@@ -220,3 +220,26 @@
   height: 30px;
   border-radius: 10px;
 }
+
+.user-card {
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-left: 2vw;
+  width: 96vw;
+  height: 7vh;
+  display: flex;
+  flex-direction: row;
+  gap: 240px;
+}
+.user-name {
+  width: 80px;
+}
+.user-class {
+  width: 150px;
+}
+.user-faction {
+  width: 80px;
+}
+.user-img {
+  margin-left: 10px;
+}

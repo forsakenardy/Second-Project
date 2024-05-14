@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import HomePage from './pages/HomePage'
 import Armament from './pages/Armament.jsx'
-import Contact from './pages/Contact.jsx'
+import Users from './pages/Users.jsx'
 import supabase from './supabase/config.js'
 import { Routes, Route, Link } from 'react-router-dom'
 import Humanoid from './pages/Humanoid.jsx'
@@ -12,12 +12,13 @@ import ArmamentInfo from './pages/ArmamentInfo.jsx'
 
 function App() {
 
+  const [users, setUsers] = useState([])
   const [armament, setArmament] = useState([])
   const [insectoids, setInsectoids] = useState([])
   const [characters, setCharacters] = useState([])
   const [isPressed, setIsPressed] = useState(false);
 
-  const toggleClass = () => {
+  const toggleClass = () => { 
     setIsPressed((prevState) => !prevState);
   };
 
@@ -54,12 +55,24 @@ function App() {
       setArmament(armament);
     }
   }
+  const getUsers = async () => {
+    const { data: users, error } = await supabase.from("Users").select('*');
+    if (error) {
+      console.log("there was an error ", error);
+      return;
+    }
+    else {
+      console.log("data fetched succesfully: ", armament);
+      setUsers(users);
+    }
+  }
 
 
   useEffect(() => {
     getCharacters();
     getInsectoids();
     getArmament();
+    getUsers();
   }, [])
 
   return (
@@ -69,7 +82,7 @@ function App() {
           <Link to="/"><h2>Home</h2></Link>
           <Link className='races-button' onClick={toggleClass} ><h2>Races</h2></Link>
           <Link to="/Store"><h2>Store</h2></Link>
-          <Link to="/Contact"><h2>Contact</h2></Link>
+          <Link to="/Users"><h2>Users</h2></Link>
         </div>
         <img className='my-logo' src="https://i.ibb.co/YcWStDk/logo.png" alt="Game Icon" />
       </section>
@@ -80,7 +93,7 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/Store' element={<Armament armament={armament} />} />
-        <Route path='/Contact' element={<Contact />} />
+        <Route path='/Users' element={<Users users={users} />} />
         <Route path='/humanoid' element={<Humanoid characters={characters} />} />
         <Route path='/insectoid' element={<Insectoid insectoids={insectoids} />} />
         <Route path="/Store/armament-info/:weaponId" element={<ArmamentInfo getArmament={getArmament} armament={armament} />} />
