@@ -89,7 +89,7 @@ function App() {
 
       <section className="Footer">
 
-          <h3>&copy; 2024 Developed by Arnaldo</h3>
+          <h3>&copy; 2024 Developed by Arnaldo Mera Rojas</h3>
           <div className='footer-icons'>
             <img className='icons-footer' src="src\assets\images\OIP-removebg-preview.png" alt="" />
             <img className='icons-footer' src="src\assets\images\OIP__1_-removebg-preview.png" alt="" />
