@@ -22,7 +22,7 @@ function App() {
   };
 
   const getCharacters = async () => {
-    const { data:characters, error } = await supabase.from("characters").select('*');
+    const { data: characters, error } = await supabase.from("characters").select('*');
     if (error) {
       console.log("there was an error ", error);
       return;
@@ -33,7 +33,7 @@ function App() {
     }
   }
   const getInsectoids = async () => {
-    const { data:insectoids, error } = await supabase.from("insectoids").select('*');
+    const { data: insectoids, error } = await supabase.from("insectoids").select('*');
     if (error) {
       console.log("there was an error ", error);
       return;
@@ -44,7 +44,7 @@ function App() {
     }
   }
   const getArmament = async () => {
-    const { data:armament, error } = await supabase.from("armament").select('*');
+    const { data: armament, error } = await supabase.from("armament").select('*');
     if (error) {
       console.log("there was an error ", error);
       return;
@@ -65,21 +65,23 @@ function App() {
   return (
     <>
       <section className="NavBar">
-        <Link to="/"><h2>HomePage</h2></Link>
-        <button onClick={toggleClass} className='races-button'><h2>Races</h2></button>
-        <Link to="/Store"><h2>Store</h2></Link>
-        <Link to="/Contact"><h2>Contact</h2></Link>
-        <img src="" alt="Game Icon" />
+        <div className='navbar-menu'>
+          <Link to="/"><h2>Home</h2></Link>
+          <Link to="/Store"><h2>Store</h2></Link>
+          <Link to="/Contact"><h2>Contact</h2></Link>
+          <button onClick={toggleClass} className='races-button'><h2>Races</h2></button>
+        </div>
+        <img className='my-logo' src="src\assets\images\logo.png" alt="Game Icon" />
       </section>
       <div className={isPressed ? 'menu-displayed' : 'races-menu'}>
         <Link to="/humanoid"><h3 className='races'>Humanoid</h3></Link>
         <Link to="/insectoid"><h3 className='races'>Insectoid</h3></Link>
-        </div>
+      </div>
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/Store' element={<Armament armament={armament} />} />
         <Route path='/Contact' element={<Contact />} />
-        <Route path='/humanoid' element={<Humanoid characters={characters}/>} />
+        <Route path='/humanoid' element={<Humanoid characters={characters} />} />
         <Route path='/insectoid' element={<Insectoid insectoids={insectoids} />} />
         <Route path="/Store/armament-info/:weaponId" element={<ArmamentInfo armament={armament} />} />
 
