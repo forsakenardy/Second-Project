@@ -1,0 +1,33 @@
+.full-armament-page{
+    width: 92vw;
+    height: 100vh;
+    margin-top: 15vh;
+    margin-left: 4vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3.2vw;
+  }
+  .armament-card {
+    border-radius: 3vw;
+    height: 43vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid white;
+  }
+  .armament-image {
+    margin-top: 2vh;
+    width: 18vw;
+    height: 30vh;
+    border-radius: 5vh;
+    border: 2px solid black;
+  }
+  .weapons-name {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    width: 20vw;
+    font-size: 1.4vw;
+  }

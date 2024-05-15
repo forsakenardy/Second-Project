@@ -1,6 +1,7 @@
 import supabase from "../supabase/config";
 import { Routes, Route, Link } from 'react-router-dom';
 import ArmamentInfo from "./ArmamentInfo";
+import "../styles/Armament.css"
 
 function Armament({ armament }) {
 

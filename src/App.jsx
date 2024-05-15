@@ -107,7 +107,7 @@ function App() {
         <div className='footer-icons'>
           <img className='icons-footer' src="https://i.ibb.co/NpYjCtr/Gmail-Logo-PNG-HD-1.png" alt="" />
           <img className='icons-footer' src="https://i.ibb.co/GCyS0CC/OIP-1-removebg-preview.png" alt="" />
-          <img className='icons-footer' src="https://i.ibb.co/L9w8D8D/OIP-removebg-preview.png" alt="" />
+        <a target="blank" href="https://github.com/forsakenardy/Second-Project"><img className='icons-footer' src="https://i.ibb.co/L9w8D8D/OIP-removebg-preview.png" alt="" /></a> 
         </div>
 
       </section>

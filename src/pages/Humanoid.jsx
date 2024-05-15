@@ -1,4 +1,5 @@
 import supabase from "../supabase/config";
+import "../styles/Humanoid.css"
 
 function Humanoid({ characters }) {
     return (

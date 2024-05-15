@@ -1,0 +1,54 @@
+.form-content {
+    position: relative;
+    top: 15vh;
+    left: 34vw;
+    width: 35vw;
+    height: 70vh;
+    margin-bottom: 20vh;
+    background-image: url("https://i.ibb.co/qN5szdN/pngtree-screen-blue-technology-border-png-image-3846897-removebg-preview.png");
+  background-size: contain;
+  
+  }
+  .formulary {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+    .label-name {
+      position: relative;
+      top: 15vh;
+      font-size: 36px;
+    }
+    .label-faction {
+      position: relative;
+      top: 17.5vh;
+      
+      select {
+        width: 150px;
+        height: 30px;
+        cursor: pointer;
+      }
+    }
+    input {
+      position: relative;
+      top: 16vh;
+      left:7.5VW;
+      width: 300px;
+      height: 30px;
+    }
+    .submit{
+      position: relative;
+      top: 19.5vh;
+      left: 9vw;
+      width: 250px;
+      height: 40px;
+      cursor: pointer;
+    }
+    .back-back {
+      position: relative;
+      top: 21vh;
+      width: 120px;
+      height: 35px;
+      cursor: pointer;
+    }
+  }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 import supabase from "../supabase/config";
+import "../styles/Form.css"
 
 function FormPage({ users, setUsers }) {
     const [newUser, setNewUser] = useState({

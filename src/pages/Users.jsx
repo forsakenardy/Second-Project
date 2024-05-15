@@ -1,6 +1,7 @@
 import React from 'react';
 import supabase from "../supabase/config";
 import { Link } from 'react-router-dom';
+import "../styles/Users.css"
 
 function Users({ users, setUsers }) {
 
