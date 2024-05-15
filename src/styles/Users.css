@@ -1,6 +1,10 @@
-.user-page {
+  .user-page {
     margin-top: 150px;
     margin-bottom: 100px;
+  }
+  .user-card-content {
+    height: 56vh;
+    overflow: auto;
   }
   .user-card {
     margin-top: 5px;

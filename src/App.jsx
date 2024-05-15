@@ -74,7 +74,7 @@ function App() {
     getInsectoids();
     getArmament();
     getUsers();
-  }, [])
+  }, [users])
 
   return (
     <>

@@ -1,21 +1,21 @@
 import supabase from "../supabase/config"
 
 function HomePage() {
-    
+
     return (
-        
+
         <>
             <section className="main-info">
                 <h1>Chain of Ascension</h1>
-                <p>"Chain of Ascension" te sumerge en un universo futurista donde la humanidad se enfrenta a una amenaza alienígena implacable: una colmena insectoide liderada por la formidable Matriarca Ziraxis. En este juego de acción y estrategia, te unirás a la lucha como un valiente soldado humanoide o te aventurarás en el corazón de la colmena como un intrépido guerrero insectoide.
+                <p>"Chain of Ascension" immerses you in a futuristic universe where humanity faces an unrelenting alien threat: an insectoid hive led by the formidable Matriarch Ziraxis. In this action and strategy game, you'll join the fight as a brave humanoid soldier or venture into the heart of the hive as an intrepid insectoid warrior. <br /> <br />
 
-Elige entre una variedad de personajes, cada uno con habilidades únicas y armamento especializado. Desde el ágil y letal Orion hasta la poderosa y acorazada Coloso Myrmax, cada personaje ofrece una experiencia de juego única y emocionante.
+                    Choose from a variety of characters, each with unique abilities and specialized weaponry. From the agile and lethal Orion to the powerful and armored Colossus Myrmax, each character offers a unique and thrilling gameplay experience. <br /><br />
 
-Enfréntate a una variedad de desafíos en intensas batallas, desde escaramuzas en campos de batalla alienígenas hasta asaltos a fortalezas enemigas. Utiliza un arsenal diverso de armas, desde la rápida y mortal Vortex Pistol hasta la devastadora Thunderclap HMG, para derrotar a las hordas insectoides y defender la humanidad de la invasión alienígena.
+                    Face a range of challenges in intense battles, from skirmishes on alien battlefields to assaults on enemy fortresses. Utilize a diverse arsenal of weapons, from the quick and deadly Vortex Pistol to the devastating Thunderclap HMG, to defeat the insectoid hordes and defend humanity from the alien invasion. <br /> <br />
 
-Explora un mundo vibrante y lleno de peligros, desde exuberantes junglas alienígenas hasta vastas ciudades devastadas por la guerra. Lucha junto a valientes aliados y enfréntate a despiadados enemigos mientras te abres camino hacia la confrontación final con la Matriarca Ziraxis y su colmena.
+                    Explore a vibrant and perilous world, from lush alien jungles to vast war-torn cities. Fight alongside brave allies and confront ruthless enemies as you make your way toward the final confrontation with Matriarch Ziraxis and her hive. <br /> <br />
 
-¿Estás listo para enfrentar el desafío y decidir el destino de la galaxia? Únete a la batalla y prepárate para la épica "Chain of Ascension".
+                    Are you ready to face the challenge and decide the fate of the galaxy? Join the battle and prepare for the epic "Chain of Ascension."
                 </p>
             </section>
         </>
