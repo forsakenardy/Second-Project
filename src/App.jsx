@@ -93,7 +93,7 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/Store' element={<Armament armament={armament} />} />
-        <Route path='/Users' element={<Users users={users} />} />
+        <Route path='/Users' element={<Users users={users} setUsers={setUsers} />} />
         <Route path='/humanoid' element={<Humanoid characters={characters} />} />
         <Route path='/insectoid' element={<Insectoid insectoids={insectoids} />} />
         <Route path="/Store/armament-info/:weaponId" element={<ArmamentInfo getArmament={getArmament} armament={armament} />} />

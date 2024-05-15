@@ -225,6 +225,7 @@
   margin-bottom: 100px;
 }
 .user-card {
+  margin-top: 5px;
   border: 2px solid white;
   border-radius: 10px;
   margin-left: 2vw;
@@ -250,5 +251,9 @@
   width: 50px;
 }
 .delete-user{
+  cursor: pointer;
+  color: white;
+  background-color: black;
   margin-right: 10px;
+  border-radius: 10px;
 }

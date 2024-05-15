@@ -1,6 +1,11 @@
 import supabase from "../supabase/config";
 
-function Users({ users }) {
+function Users({ users, setUsers }) {
+
+    const deleteuser = userId => {
+        const filteredUser = users.filter(user => user.id !== userId);
+        return setUsers(filteredUser)
+    }
     return (
         <>
             <div className="user-page">
@@ -14,7 +19,7 @@ function Users({ users }) {
                                     <h3 className="user-faction">{user.faction}</h3>
                                     <h3 className="user-class">{user.Class}</h3>
                                     <h3 className="user-lvl">{user.lvl}</h3>
-                                    <button className="delete-user">Delete</button>
+                                    <img className="delete-user"  onClick={() => deleteuser(user.id)} src="https://cdn-icons-png.flaticon.com/512/8568/8568248.png" alt="" />
                                 </div>
                             </>
                         )
