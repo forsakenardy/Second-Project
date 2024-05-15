@@ -1,4 +1,5 @@
 import supabase from "../supabase/config";
+import { Link } from 'react-router-dom';
 
 function Users({ users, setUsers }) {
 
@@ -25,6 +26,7 @@ function Users({ users, setUsers }) {
                         )
                     })
                 }
+                <Link to="/Users/FormPage" ><button className="form-link">Create new user</button></Link>
             </div>
         </>
     )

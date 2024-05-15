@@ -8,6 +8,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import Humanoid from './pages/Humanoid.jsx'
 import Insectoid from './pages/Insectoid.jsx'
 import ArmamentInfo from './pages/ArmamentInfo.jsx'
+import FormPage from './pages/FormPage.jsx'
 
 
 function App() {
@@ -97,7 +98,7 @@ function App() {
         <Route path='/humanoid' element={<Humanoid characters={characters} />} />
         <Route path='/insectoid' element={<Insectoid insectoids={insectoids} />} />
         <Route path="/Store/armament-info/:weaponId" element={<ArmamentInfo getArmament={getArmament} armament={armament} />} />
-
+        <Route path="/Users/FormPage" element={<FormPage />} />
       </Routes>
 
       <section className="Footer">
