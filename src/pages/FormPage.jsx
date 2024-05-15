@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
+import supabase from "../supabase/config";
 
 function FormPage({ users, setUsers }) {
     const [newUser, setNewUser] = useState({
@@ -20,18 +21,25 @@ function FormPage({ users, setUsers }) {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setUsers([newUser, ...users]);
-        setNewUser({
-            Name: "",
-            faction: "",
-            Class: "Player",
-            lvl: 1,
-            icon: "",
-            id: String(Math.floor(Math.random() * 10000000))
-        });
-    };
+        const { data, error } = await supabase.from("Users").insert([newUser]);
+        if (error) {
+            console.log("un error", error);
+            return
+        }
+        else {
+            console.log("user created");
+            setNewUser({
+                Name: "",
+                faction: "",
+                Class: "Player",
+                lvl: 1,
+                icon: "",
+                id: String(Math.floor(Math.random() * 10000000))
+            });
+        };
+    }
 
     useEffect(() => {
         if (newUser.faction === "Insectoid") {
@@ -70,5 +78,4 @@ function FormPage({ users, setUsers }) {
         </div>
     );
 }
-
 export default FormPage;
