@@ -266,3 +266,53 @@
   height: 50px;
   border-radius: 10px ;
 }
+
+.form-content {
+  position: relative;
+  top: 15vh;
+  left: 34vw;
+  width: 35vw;
+  height: 70vh;
+  margin-bottom: 20vh;
+  background-image: url("https://i.ibb.co/qN5szdN/pngtree-screen-blue-technology-border-png-image-3846897-removebg-preview.png");
+background-size: contain;
+
+}
+.formulary {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  
+  .label-name {
+    position: relative;
+    top: 17vh;
+    font-size: 36px;
+  }
+  .label-faction {
+    position: relative;
+    top: 20vh;
+    
+    select {
+      width: 200px;
+      height: 30px;
+    }
+  }
+  input {
+    position: relative;
+    top: 18vh;
+    left: 9.5VW;
+    width: 300px;
+    height: 30px;
+  }
+  .submit{
+    position: relative;
+    top: 23vh;
+    left: 11vw;
+    width: 250px;
+    height: 40px;
+  }
+  .back-back {
+    position: relative;
+    top: 25vh;
+  }
+}

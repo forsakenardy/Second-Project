@@ -55,18 +55,16 @@ function FormPage({ users, setUsers }) {
     return (
         <div className="form-content">
             <form onSubmit={handleSubmit} className="formulary">
-                <label htmlFor="Name">Name</label>
-                <input onChange={handleInputs} type="text" value={newUser.Name} name="Name" />
-
-                <label htmlFor="faction">
-                    Faction
+                <label className="label-name" htmlFor="Name">New User</label>
+                <input onChange={handleInputs} placeholder="Full Name" type="text" value={newUser.Name} name="Name" />
+                <label className="label-faction" htmlFor="faction">
                     <select name="faction" value={newUser.faction} onChange={handleInputs}>
                         <option value="">-- None --</option>
                         <option value="Insectoid">Insectoid</option>
                         <option value="Humanoid">Humanoid</option>
                     </select>
                 </label>
-                <button type="submit">Submit</button>
+                <button className="submit" type="submit">Submit</button>
                 <Link to="/Users"><button className="back-back">Go back</button></Link>
             </form>
         </div>
