@@ -257,3 +257,12 @@
   margin-right: 10px;
   border-radius: 10px;
 }
+
+.form-link {
+  margin-left: 70vw;
+  margin-top: 50px;
+  font-size: 18px;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px ;
+}

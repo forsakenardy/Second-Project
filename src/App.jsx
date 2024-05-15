@@ -98,7 +98,7 @@ function App() {
         <Route path='/humanoid' element={<Humanoid characters={characters} />} />
         <Route path='/insectoid' element={<Insectoid insectoids={insectoids} />} />
         <Route path="/Store/armament-info/:weaponId" element={<ArmamentInfo getArmament={getArmament} armament={armament} />} />
-        <Route path="/Users/FormPage" element={<FormPage />} />
+        <Route path="/Users/FormPage" element={<FormPage users={users} setUsers={setUsers} />} />
       </Routes>
 
       <section className="Footer">
