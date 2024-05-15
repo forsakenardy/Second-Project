@@ -34,8 +34,6 @@
   }
   .delete-user{
     cursor: pointer;
-    color: white;
-    background-color: black;
     margin-right: 10px;
     border-radius: 10px;
   }
