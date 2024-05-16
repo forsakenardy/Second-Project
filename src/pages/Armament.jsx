@@ -3,7 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import ArmamentInfo from "./ArmamentInfo";
 import "../styles/Armament.css"
 
-function Armament({ armament }) {
+function Armament({ armament, handleButtonClick3 }) {
 
 
     return (
@@ -12,7 +12,7 @@ function Armament({ armament }) {
                 armament.map((weapon) => {
                     return (
                         <>
-                            <Link key={weapon.id} to={`/Store/armament-info/${weapon.id}`}>
+                            <Link onClick={handleButtonClick3} key={weapon.id} to={`/Store/armament-info/${weapon.id}`}>
                                     <div className="armament-card">
                                         <img className="armament-image" src={weapon.image} alt="image of the Armament" />
                                         <h1 className="weapons-name">{weapon.name}</h1>

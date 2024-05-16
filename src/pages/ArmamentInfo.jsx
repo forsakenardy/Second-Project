@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "../styles/ArmamentInfo.css"
 
-function ArmamentInfo({ armament, getArmament }) {
+function ArmamentInfo({ armament, getArmament, handleButtonClick }) {
     const { weaponId } = useParams();
     const navigate = useNavigate();
 
@@ -56,10 +56,18 @@ function ArmamentInfo({ armament, getArmament }) {
                         <li><h3>Description: {weaponCard.description}</h3></li>
                     </ul>
                     <div className="armament-info-buttons">
-                        <button className="buy">Buy</button>
+                        <button onClick={handleButtonClick} className="buy">Buy</button>
                         <div>
-                            <button className="prevnext" onClick={prev}>Prev</button>
-                            <button className="prevnext" onClick={next}>Next</button>
+                            <button className="prevnext" onClick={() => {
+                                prev()
+                                handleButtonClick()
+                            }}>
+                                Prev</button>
+                            <button className="prevnext" onClick={() => {
+                                next()
+                                handleButtonClick()
+                            }}>
+                                Next</button>
                         </div>
 
                     </div>
