@@ -13,7 +13,8 @@ function Users({ users, setUsers }) {
 
         if (error) {
             console.log("something", error);
-        } else {
+        } 
+        else {
             setUsers(prevUsers => prevUsers.filter(user => user.id !== id));
         }
     };

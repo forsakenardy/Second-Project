@@ -100,7 +100,7 @@ function App() {
         <Route path='/insectoid' element={<Insectoid insectoids={insectoids} />} />
         <Route path="/Store/armament-info/:weaponId" element={<ArmamentInfo getArmament={getArmament} armament={armament} />} />
         <Route path="/Users/FormPage" element={<FormPage users={users} setUsers={setUsers} getUsers={getUsers} />} />
-        <Route path="/Users/:userId" element={<EditPage users={users} setUsers={setUsers} />} />
+        <Route path="/Users/:userId" element={<EditPage users={users} setUsers={setUsers} getUsers={getUsers} />} />
       </Routes>
 
       <section className="Footer">
