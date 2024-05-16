@@ -2,32 +2,55 @@
     margin-top: 150px;
     margin-bottom: 100px;
   }
+  .user-table {
+    margin-left: 132px;
+    width: 42vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .user-card-content {
     height: 56vh;
     overflow: auto;
   }
   .user-card {
-    margin-top: 5px;
+    background-color:rgb(28, 28, 28);
+    margin-top: 20px;
     border: 2px solid white;
-    border-radius: 10px;
+    border-radius: 50px;
     margin-left: 2vw;
-    width: 96vw;
+    width: 95vw;
     height: 7vh;
     display: flex;
     flex-direction: row;
-    gap: 200px;
+    justify-content: space-between;
+  }
+  .user-card div {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .user-card div div {
+    width: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
   .user-name {
     width: 80px;
   }
   .user-class {
-    width: 150px;
+    width: 156px;
   }
   .user-faction {
     width: 80px;
   }
   .user-img {
     margin-left: 10px;
+    width: 50px;
   }
   .user-lvl {
     width: 50px;
@@ -36,9 +59,10 @@
     cursor: pointer;
     margin-right: 10px;
     border-radius: 10px;
+    width: 55px;
   }
   .form-link {
-    margin-left: 70vw;
+    margin-left: 2vw;
     margin-top: 50px;
     font-size: 18px;
     width: 200px;

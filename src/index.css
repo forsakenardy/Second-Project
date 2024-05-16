@@ -13,13 +13,14 @@
 }
 
 a {
-  font-weight: 500;
+  font-weight: 400;
   color: grey;
   text-decoration: inherit;
 }
 a:hover {
-  color: white;
+  color:white;
 }
+
 
 body {
   margin: 0;

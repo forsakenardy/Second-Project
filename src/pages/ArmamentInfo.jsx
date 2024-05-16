@@ -43,7 +43,7 @@ function ArmamentInfo({ armament, getArmament }) {
     };
 
     return (
-        <div className="full-armament-page">
+        <div className="full-armament-page-2">
             <div key={weaponCard.id} className="humanoid-card">
                 <div className="div-armament">
                     <h1 className="character-name">{weaponCard.name}</h1>

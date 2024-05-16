@@ -5,20 +5,20 @@
     height: 80vh;
     display: flex;
     flex-direction: row;
-    margin-bottom: 30vh;
-    gap: 10vh;
+    align-items: center;
+    margin-bottom: 10vh;
+    gap: 20vh;
     box-shadow: 0px 28px 45px -41px rgba(255,255,255,1);
   }
   .description {
     height: 80vh;
   }
   .humanoid-image {
-    height: 80vh;
-    
+    height: 70vh;
   }
   .character-name {
-    margin-left:2vw;
-    font-size: 6.7vh;
+    margin-left:2.5vw;
+    font-size: 48px;
     font-family: "Chakra Petch", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -27,15 +27,21 @@
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 200;
     font-style: normal;
-    font-size: 2.5vh;
   }
   .info-card {
     overflow: auto;
-    height: 45vh;
+    height: 40vh;
+    width: 40vw;
+  }
+  .info-card li {
+    list-style: none;
   }
   .info-card h2{
     font-family: "Chakra Petch", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 5vh;
+    font-size: 24px;
+  }
+  .info-card h3 {
+    font-size: 16px;
   }
