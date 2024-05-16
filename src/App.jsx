@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage'
 import Armament from './pages/Armament.jsx'
 import Users from './pages/Users.jsx'
 import supabase from './supabase/config.js'
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, Link, NavLink } from 'react-router-dom'
 import Humanoid from './pages/Humanoid.jsx'
 import Insectoid from './pages/Insectoid.jsx'
 import ArmamentInfo from './pages/ArmamentInfo.jsx'
@@ -149,14 +149,14 @@ function App() {
     <>
       <section className="NavBar">
         <div className='navbar-menu'>
-          <Link onClick={handleButtonClick} to="/"><h2>Home</h2></Link>
-          <Link onClick={() => {
+          <NavLink onClick={handleButtonClick} to="/" className={({ isActive }) => isActive ? "selected" : ""}><h2>Home</h2></NavLink>
+          <NavLink onClick={() => {
             toggleClass()
             handleButtonClick2()
           }}
-            className='races-button' ><h2>Races</h2></Link>
-          <Link onClick={handleButtonClick} to="/Store"><h2>Store</h2></Link>
-          <Link onClick={handleButtonClick} to="/Users"><h2>Users</h2></Link>
+          className='races-button' ><h2>Races</h2></NavLink>
+          <NavLink onClick={handleButtonClick} to="/Store"  className={({ isActive }) => isActive ? "selected" : ""}><h2>Store</h2></NavLink>
+          <NavLink onClick={handleButtonClick} to="/Users"  className={({ isActive }) => isActive ? "selected" : ""}><h2>Users</h2></NavLink>
         </div>
         <img className='my-logo' src="https://i.ibb.co/YcWStDk/logo.png" alt="Game Icon" />
       </section>
