@@ -13,6 +13,8 @@ import EditPage from './pages/EditPage.jsx'
 import click from './assets/images/click.mp3'
 import menu from './assets/images/menu-display.mp3'
 import click2 from './assets/images/click2.mp3'
+import robotsound from './assets/images/robot-sound.mp3'
+import insectsound from './assets/images/insect-sound.mp3'
 
 
 
@@ -118,6 +120,31 @@ function App() {
     playSound3();
   };
 
+  const audioRef4 = useRef(null);
+  const [buttonClicked4, setButtonClicked4] = useState(false);
+
+  const playSound4 = () => {
+    audioRef4.current.play();
+  };
+
+  const handleButtonClick4 = () => {
+    setButtonClicked4(true);
+    playSound4();
+  };
+
+
+  const audioRef5 = useRef(null);
+  const [buttonClicked5, setButtonClicked5] = useState(false);
+
+  const playSound5 = () => {
+    audioRef5.current.play();
+  };
+
+  const handleButtonClick5 = () => {
+    setButtonClicked5(true);
+    playSound5();
+  };
+
   return (
     <>
       <section className="NavBar">
@@ -135,11 +162,10 @@ function App() {
       </section>
       <div onClick={() => {
         toggleClass()
-        handleButtonClick()
       }}
         className={isPressed ? 'menu-displayed' : 'races-menu'}>
-        <Link onClick={handleButtonClick} to="/humanoid"><h3 className='races'>Humanoid</h3></Link>
-        <Link onClick={handleButtonClick} to="/insectoid"><h3 className='races'>Insectoid</h3></Link>
+        <Link onClick={handleButtonClick4} to="/humanoid"><h3 className='races'>Humanoid</h3></Link>
+        <Link onClick={handleButtonClick5} to="/insectoid"><h3 className='races'>Insectoid</h3></Link>
       </div>
       <Routes>
         <Route path='/' element={<HomePage />} />
@@ -172,6 +198,8 @@ function App() {
         <audio ref={audioRef} src={click} />
         <audio ref={audioRef2} src={menu} />
         <audio ref={audioRef3} src={click2} />
+        <audio ref={audioRef4} src={robotsound} />
+        <audio ref={audioRef5} src={insectsound} />
       </section>
     </>
   )
