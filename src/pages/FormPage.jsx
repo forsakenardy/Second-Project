@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import supabase from "../supabase/config";
 import "../styles/Form.css"
 
-function FormPage({ users, setUsers }) {
+function FormPage({ users, setUsers , getUsers }) {
     const [newUser, setNewUser] = useState({
         Name: "",
         faction: "",
@@ -39,6 +39,7 @@ function FormPage({ users, setUsers }) {
                 icon: "",
                 id: String(Math.floor(Math.random() * 10000000))
             });
+            getUsers();
         };
     }
 
