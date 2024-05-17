@@ -3,8 +3,9 @@ import { Link } from "react-router-dom"
 import supabase from "../supabase/config";
 import "../styles/Form.css"
 
-function FormPage({ users, setUsers, getUsers, handleButtonClick, handleButtonClick3 }) {
+function FormPage({ users, setUsers, getUsers, handleButtonClick, handleButtonClick3 }) { // remember to delete unused props.
     const [newUser, setNewUser] = useState({
+        // same thing with the initial state here. You can store it in a variable and pass it to the useState hook as an argument.
         Name: "",
         faction: "",
         Class: "Player",
@@ -43,7 +44,7 @@ function FormPage({ users, setUsers, getUsers, handleButtonClick, handleButtonCl
         };
     }
 
-    useEffect(() => {
+    useEffect(() => { // if you have declared the exact same logic in the EditPage component, you can create a function that takes the user object as an argument and returns the icon url in another file and import it in both components.
         if (newUser.faction === "Insectoid") {
             setNewUser((prevState) => ({
                 ...prevState,
