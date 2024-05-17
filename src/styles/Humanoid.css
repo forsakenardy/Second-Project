@@ -1,47 +1,55 @@
 .humanoid-card {
-    margin-top: 15vh;
-    margin-left: 1vw;
-    width: 97vw;
-    height: 80vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 10vh;
-    gap: 20vh;
-    box-shadow: 0px 28px 45px -41px rgba(255,255,255,1);
-  }
-  .description {
-    height: 80vh;
-  }
-  .humanoid-image {
-    height: 70vh;
-  }
-  .character-name {
-    margin-left:2.5vw;
-    font-size: 48px;
-    font-family: "Chakra Petch", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  .info{
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-  }
-  .info-card {
-    overflow: auto;
-    height: 40vh;
-    width: 40vw;
-  }
-  .info-card li {
-    list-style: none;
-  }
-  .info-card h2{
-    font-family: "Chakra Petch", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 24px;
-  }
-  .info-card h3 {
-    font-size: 16px;
-  }
+  margin-top: 15vh;
+  margin-left: 1vw;
+  width: 97vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10vh;
+  gap: 20vh;
+  box-shadow: 0px 28px 45px -41px rgba(255, 255, 255, 1);
+}
+
+.description {
+  height: 80vh;
+}
+
+.humanoid-image {
+  height: 70vh;
+}
+
+.character-name {
+  margin-left: 2.5vw;
+  font-size: 48px;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.info {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.info-card {
+  overflow: auto;
+  height: 40vh;
+  width: 40vw;
+}
+
+.info-card li {
+  list-style: none;
+}
+
+.info-card h2 {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.info-card h3 {
+  font-size: 20px;
+}

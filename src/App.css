@@ -1,12 +1,12 @@
-
 .races-button {
   font-family: "Chakra Petch", sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: rgb(28, 28, 28) ;
+  background-color: rgb(28, 28, 28);
   color: grey;
   cursor: pointer;
 }
+
 .NavBar {
   font-family: "Chakra Petch", sans-serif;
   font-style: normal;
@@ -20,22 +20,26 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .navbar-menu {
   display: flex;
   flex-direction: row;
   gap: 96px;
   margin-left: 2vw;
 }
+
 .my-logo {
   height: 48px;
   width: px;
   margin-right: 1.5vw;
 }
+
 .NavBar h2 {
   margin: 8px 0;
-  font-size:24px;
-  font-weight: 400 ;
+  font-size: 24px;
+  font-weight: 400;
 }
+
 .main-info h1 {
   font-family: "Chakra Petch", sans-serif;
   font-weight: 400;
@@ -46,6 +50,7 @@
   margin-bottom: 0;
   height: auto;
 }
+
 .main-info p {
   width: 95vw;
   font-family: "IBM Plex Sans", sans-serif;
@@ -56,35 +61,41 @@
   height: auto;
   padding-bottom: 80px;
 }
+
 .Footer {
 
   position: relative;
   bottom: 0;
   width: 100vw;
-  background-color:rgb(28, 28, 28);
+  background-color: rgb(28, 28, 28);
   text-align: start;
   display: flex;
   flex-direction: column;
   padding-left: 4vh;
 }
+
 .footer-icons {
 
   display: flex;
   flex-direction: row;
   gap: 32px;
 }
+
 .Footer h3 {
   font-size: 14px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.87);
 }
+
 .icons-footer {
   width: 50px;
   cursor: pointer;
 }
+
 .races-menu {
   display: none;
 }
+
 .menu-displayed {
   font-family: "Chakra Petch", sans-serif;
   font-weight: 400;
@@ -92,15 +103,16 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  border-bottom-left-radius: 8px ;
+  border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  top: 52px;
+  top: 59px;
   left: 187px;
   background-color: rgb(74, 73, 73);
-  box-shadow: -8px 5px 15px -5px rgba(0,0,0,0.6);
+  box-shadow: -8px 5px 15px -5px rgba(0, 0, 0, 0.6);
   animation-duration: 0.5s;
   animation-name: slidein;
 }
+
 @keyframes slidein {
   from {
     height: 0;
@@ -112,6 +124,7 @@
     width: 174px;
   }
 }
+
 .races {
   font-weight: 400;
   font-size: 24px;
@@ -120,14 +133,17 @@
   animation-delay: 0.5s;
   animation-name: displaying;
 }
+
 @keyframes displaying {
   from {
     color: rgb(239, 220, 197);
   }
+
   to {
     color: grey;
   }
 }
+
 .selected {
   text-shadow: 1px 0px 3px white;
   color: #fff;

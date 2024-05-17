@@ -154,9 +154,9 @@ function App() {
             toggleClass()
             handleButtonClick2()
           }}
-          className='races-button' ><h2>Races</h2></NavLink>
-          <NavLink onClick={handleButtonClick} to="/Store"  className={({ isActive }) => isActive ? "selected" : ""}><h2>Store</h2></NavLink>
-          <NavLink onClick={handleButtonClick} to="/Users"  className={({ isActive }) => isActive ? "selected" : ""}><h2>Users</h2></NavLink>
+            className='races-button' ><h2>Races</h2></NavLink>
+          <NavLink onClick={handleButtonClick} to="/Store" className={({ isActive }) => isActive ? "selected" : ""}><h2>Store</h2></NavLink>
+          <NavLink onClick={handleButtonClick} to="/Users" className={({ isActive }) => isActive ? "selected" : ""}><h2>Users</h2></NavLink>
         </div>
         <img className='my-logo' src="https://i.ibb.co/YcWStDk/logo.png" alt="Game Icon" />
       </section>
@@ -170,7 +170,7 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/Store' element={<Armament handleButtonClick3={handleButtonClick3} armament={armament} />} />
-        <Route path='/Users' element={<Users users={users} setUsers={setUsers} />} />
+        <Route path='/Users' element={<Users users={users} handleButtonClick={handleButtonClick} setUsers={setUsers} />} />
         <Route path='/humanoid' element={<Humanoid characters={characters} />} />
         <Route path='/insectoid' element={<Insectoid insectoids={insectoids} />} />
         <Route path="/Store/armament-info/:weaponId" element={<ArmamentInfo

@@ -2,6 +2,7 @@
     margin-top: 150px;
     margin-bottom: 100px;
   }
+
   .user-table {
     margin-left: 132px;
     width: 42vw;
@@ -9,12 +10,14 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
   .user-card-content {
     height: 56vh;
     overflow: auto;
   }
+
   .user-card {
-    background-color:rgb(28, 28, 28);
+    background-color: rgb(28, 28, 28);
     margin-top: 20px;
     border: 2px solid white;
     border-radius: 50px;
@@ -24,7 +27,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
+
   .user-card div {
     width: 50vw;
     display: flex;
@@ -32,6 +37,7 @@
     justify-content: space-between;
     align-items: center;
   }
+
   .user-card div div {
     width: 170px;
     display: flex;
@@ -39,34 +45,42 @@
     justify-content: space-around;
     align-items: center;
   }
+
   .user-name {
     width: 80px;
   }
+
   .user-class {
     width: 156px;
   }
+
   .user-faction {
     width: 80px;
   }
+
   .user-img {
     margin-left: 10px;
     width: 50px;
   }
+
   .user-lvl {
     width: 50px;
   }
-  .delete-user{
+
+  .delete-user {
     cursor: pointer;
     margin-right: 10px;
     border-radius: 10px;
-    width: 55px;
+    width: 40px;
+    height: 40px;
   }
+
   .form-link {
     margin-left: 2vw;
     margin-top: 50px;
     font-size: 18px;
     width: 200px;
     height: 50px;
-    border-radius: 10px ;
+    border-radius: 10px;
     cursor: pointer;
   }

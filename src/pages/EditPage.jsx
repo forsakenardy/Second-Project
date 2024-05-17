@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/Form2.css"
 
-function EditPage({users, setUsers, getUsers}) {
+function EditPage({ users, setUsers, getUsers }) {
     const { userId } = useParams();
     const [editUsers, setEditUsers] = useState({
         Name: "",
@@ -67,13 +67,13 @@ function EditPage({users, setUsers, getUsers}) {
                 <label className="label-name2" htmlFor="Name">Edit Profile</label>
                 <input onChange={handleInputs} placeholder="Edit User Name" name="Name" value={editUsers.Name} type="text" />
                 <label className="label-faction2" htmlFor="faction">
-                <select onChange={handleInputs} name="faction" value={editUsers.faction}>
-                    <option value="">-- None --</option>
-                    <option value="Insectoid">Insectoid</option>
-                    <option value="Humanoid">Humanoid</option>
-                </select>
+                    <select onChange={handleInputs} name="faction" value={editUsers.faction}>
+                        <option value="">-- None --</option>
+                        <option value="Insectoid">Insectoid</option>
+                        <option value="Humanoid">Humanoid</option>
+                    </select>
                 </label>
-                <input onChange={handleInputs} placeholder="Edit Status" name="Class"  value={editUsers.Class} type="text" />
+                <input onChange={handleInputs} placeholder="Edit Status" name="Class" value={editUsers.Class} type="text" />
                 <button className="submit2" type="submit">Submit</button>
                 <Link to="/Users"><button className="back-back2">Go back</button></Link>
             </form>

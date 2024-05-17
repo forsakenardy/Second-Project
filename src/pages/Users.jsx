@@ -3,7 +3,7 @@ import supabase from "../supabase/config";
 import { Link } from 'react-router-dom';
 import "../styles/Users.css"
 
-function Users({ users, setUsers }) {
+function Users({ users, setUsers, handleButtonClick }) {
 
     const deleteUser = async (id) => {
         const { error } = await supabase
@@ -13,7 +13,7 @@ function Users({ users, setUsers }) {
 
         if (error) {
             console.log("something", error);
-        } 
+        }
         else {
             setUsers(prevUsers => prevUsers.filter(user => user.id !== id));
         }
@@ -45,17 +45,17 @@ function Users({ users, setUsers }) {
                                     <h3 className="user-class">{user.Class}</h3>
                                     <h3 className="user-lvl">{user.lvl}</h3>
                                 </div>
-                                <Link to={`/Users/${user.id}`} >
+                                <Link onClick={handleButtonClick} to={`/Users/${user.id}`} >
                                     <img
                                         className="delete-user"
-                                        src="https://sacy-le-petit.fr/wp-content/uploads/picto-evenements.png"
+                                        src="https://i.ibb.co/PwhzHvD/edit.png"
                                         alt="edit"
                                     />
                                 </Link>
                                 <img
                                     className="delete-user"
                                     onClick={() => deleteUser(user.id)}
-                                    src="https://img.favpng.com/5/3/23/computer-icons-portable-network-graphics-scalable-vector-graphics-clip-art-download-png-favpng-Ri0rW2kfg76ksJCVcFNptiBwL.jpg"
+                                    src="https://i.ibb.co/89gvYp2/delete.png"
                                     alt="Delete"
                                 />
 
@@ -65,7 +65,7 @@ function Users({ users, setUsers }) {
                 }
             </div>
             <Link to="/Users/FormPage">
-                <button className="form-link">Create new user</button>
+                <button onClick={handleButtonClick} className="form-link">Create new user</button>
             </Link>
         </div>
     );

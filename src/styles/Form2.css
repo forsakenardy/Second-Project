@@ -1,53 +1,58 @@
 .form2-content {
-    position: relative;
-    top: 5vh;
-    left: 27vw;
-    width: 45vw;
-    height: 90vh;
-    margin-bottom: 5vh;
-    background-image: url("https://i.ibb.co/qN5szdN/pngtree-screen-blue-technology-border-png-image-3846897-removebg-preview.png");
+  position: relative;
+  top: 5vh;
+  left: 27vw;
+  width: 45vw;
+  height: 90vh;
+  margin-bottom: 5vh;
+  background-image: url("https://i.ibb.co/qN5szdN/pngtree-screen-blue-technology-border-png-image-3846897-removebg-preview.png");
   background-size: contain;
+}
+
+.formulary2 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  .label-name2 {
+    position: relative;
+    top: 19vh;
+    font-size: 36px;
   }
-  .formulary2 {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    
-    .label-name2 {
-      position: relative;
-      top: 19vh;
-      font-size: 36px;
-    }
-    .label-faction2 {
-      position: relative;
-      top: 31vh;
-      
-      select {
-        width: 150px;
-        height: 30px;
-        cursor: pointer;
-      }
-    }
-    input {
-      position: relative;
-      top: 20vh;
-      left:12.5VW;
-      width: 300px;
+
+  .label-faction2 {
+    position: relative;
+    top: 31vh;
+
+    select {
+      width: 150px;
       height: 30px;
-    }
-    .submit2{
-      position: relative;
-      top: 29vh;
-      left: 14vw;
-      width: 250px;
-      height: 40px;
-      cursor: pointer;
-    }
-    .back-back2 {
-      position: relative;
-      top: 30.5vh;
-      width: 120px;
-      height: 35px;
       cursor: pointer;
     }
   }
+
+  input {
+    position: relative;
+    top: 20vh;
+    left: 12.5VW;
+    width: 300px;
+    height: 30px;
+  }
+
+  .submit2 {
+    position: relative;
+    top: 29vh;
+    left: 14vw;
+    width: 250px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  .back-back2 {
+    position: relative;
+    top: 30.5vh;
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+  }
+}

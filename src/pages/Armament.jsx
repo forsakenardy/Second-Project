@@ -13,9 +13,9 @@ function Armament({ armament, handleButtonClick3 }) {
                     return (
                         <>
                             <Link onClick={handleButtonClick3} key={weapon.id} to={`/Store/armament-info/${weapon.id}`}>
-                                    <div className="armament-card">
-                                        <img className="armament-image" src={weapon.image} alt="image of the Armament" />
-                                        <h1 className="weapons-name">{weapon.name}</h1>
+                                <div className="armament-card">
+                                    <img className="armament-image" src={weapon.image} alt="image of the Armament" />
+                                    <h1 className="weapons-name">{weapon.name}</h1>
                                 </div>
 
                             </Link>
