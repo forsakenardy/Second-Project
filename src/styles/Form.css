@@ -33,7 +33,7 @@
       input {
         position: relative;
         top: 16vh;
-        left: 8.3VW;
+        left: 7.5VW;
         width: 300px;
         height: 30px;
       }
@@ -41,7 +41,7 @@
       .submit {
         position: relative;
         top: 19.5vh;
-        left: 9.8vw;
+        left: 9vw;
         width: 250px;
         height: 40px;
         cursor: pointer;
