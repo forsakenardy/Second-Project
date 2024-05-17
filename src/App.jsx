@@ -178,8 +178,8 @@ function App() {
           handleButtonClick={handleButtonClick}
           armament={armament}
         />} />
-        <Route path="/Users/FormPage" element={<FormPage users={users} setUsers={setUsers} getUsers={getUsers} />} />
-        <Route path="/Users/:userId" element={<EditPage users={users} setUsers={setUsers} getUsers={getUsers} />} />
+        <Route path="/Users/FormPage" element={<FormPage users={users} setUsers={setUsers} handleButtonClick={handleButtonClick} handleButtonClick3={handleButtonClick3} getUsers={getUsers} />} />
+        <Route path="/Users/:userId" element={<EditPage users={users} setUsers={setUsers} handleButtonClick={handleButtonClick} handleButtonClick3={handleButtonClick3} getUsers={getUsers} />} />
       </Routes>
 
       <section className="Footer">

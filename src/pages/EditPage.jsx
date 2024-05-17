@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/Form2.css"
 
-function EditPage({ users, setUsers, getUsers }) {
+function EditPage({ users, setUsers, getUsers, handleButtonClick, handleButtonClick3 }) {
     const { userId } = useParams();
     const [editUsers, setEditUsers] = useState({
         Name: "",
@@ -74,8 +74,8 @@ function EditPage({ users, setUsers, getUsers }) {
                     </select>
                 </label>
                 <input onChange={handleInputs} placeholder="Edit Status" name="Class" value={editUsers.Class} type="text" />
-                <button className="submit2" type="submit">Submit</button>
-                <Link to="/Users"><button className="back-back2">Go back</button></Link>
+                <button onClick={handleButtonClick3} className="submit2" type="submit">Submit</button>
+                <Link onClick={handleButtonClick} to="/Users"><button className="back-back2">Go back</button></Link>
             </form>
         </div>
     )

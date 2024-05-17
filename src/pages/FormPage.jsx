@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import supabase from "../supabase/config";
 import "../styles/Form.css"
 
-function FormPage({ users, setUsers, getUsers }) {
+function FormPage({ users, setUsers, getUsers, handleButtonClick, handleButtonClick3 }) {
     const [newUser, setNewUser] = useState({
         Name: "",
         faction: "",
@@ -74,8 +74,8 @@ function FormPage({ users, setUsers, getUsers }) {
                         <option value="Humanoid">Humanoid</option>
                     </select>
                 </label>
-                <button className="submit" type="submit">Submit</button>
-                <Link to="/Users"><button className="back-back">Go back</button></Link>
+                <button onClick={handleButtonClick3} className="submit" type="submit">Submit</button>
+                <Link onClick={handleButtonClick} to="/Users"><button className="back-back">Go back</button></Link>
             </form>
         </div>
     );
