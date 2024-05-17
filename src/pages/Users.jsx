@@ -6,6 +6,7 @@ import "../styles/Users.css"
 function Users({ users, setUsers, handleButtonClick }) {
 
     const deleteUser = async (id) => {
+        // good job with the delete function. 👍
         const { error } = await supabase
             .from("Users")
             .delete()

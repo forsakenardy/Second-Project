@@ -12,8 +12,8 @@ function ArmamentInfo({ armament, getArmament, handleButtonClick }) {
     const [nextIndex, setNextIndex] = useState(null);
 
     useEffect(() => {
-        getArmament();
-    }, [getArmament]);
+        getArmament(); 
+    }, [getArmament]);// if getArmament doesn't change and is only used to fetch data when the component mounts, the dependency array can be left empty like so [].
 
     useEffect(() => {
         if (armament.length > 0) {
@@ -21,7 +21,7 @@ function ArmamentInfo({ armament, getArmament, handleButtonClick }) {
             setWeaponIndex(currentIndex);
             setWeaponCard(armament[currentIndex]);
         }
-    }, [armament, weaponId]);
+    }, [armament, weaponId]); // nice use of the dependency array. 💪
 
     useEffect(() => {
         if (weaponIndex !== null) {
@@ -33,6 +33,15 @@ function ArmamentInfo({ armament, getArmament, handleButtonClick }) {
     if (weaponIndex === null || weaponCard === null) {
         return <div>Loading...</div>;
     }
+
+    /* 
+    The prev next functions can be converted into a single function that takes a parameter to determine if the user wants to go to the previous or next weapon.
+    const navigateToWeapon = (index) => {
+        navigate(`/Store/armament-info/${armament[index].id}`);
+    };
+
+    so, when you call the function, you can pass -1 to go to the previous weapon and 1 to go to the next weapon.
+    */
 
     const prev = () => {
         navigate(`/Store/armament-info/${armament[prevIndex].id}`);

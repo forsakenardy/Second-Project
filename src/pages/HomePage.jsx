@@ -1,4 +1,4 @@
-import supabase from "../supabase/config"
+import supabase from "../supabase/config" // supabase is not being used.
 
 function HomePage() {
 

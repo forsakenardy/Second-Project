@@ -6,6 +6,9 @@ import "../styles/Form2.css"
 
 function EditPage({ users, setUsers, getUsers, handleButtonClick, handleButtonClick3 }) {
     const { userId } = useParams();
+
+    // the initial state can be stored in a variable and passed to the useState hook as an argument.
+    // this way you don't repeat the same object in multiple places.
     const [editUsers, setEditUsers] = useState({
         Name: "",
         faction: "",
@@ -14,7 +17,7 @@ function EditPage({ users, setUsers, getUsers, handleButtonClick, handleButtonCl
         icon: ""
     });
 
-    const handleInputs = (e) => {
+    const handleInputs = (e) => { // nice use of the handleInputs function. 👍
         const field = e.target.name;
         const value = e.target.value;
         setEditUsers({
@@ -24,14 +27,15 @@ function EditPage({ users, setUsers, getUsers, handleButtonClick, handleButtonCl
     }
 
     const handleSubmit = async (e) => {
+        // excellent use of the async/await syntax. 👏 You followed supabases documentation
         e.preventDefault();
         const { error } = await supabase.from('Users').update(editUsers).eq('id', userId);
         if (error) {
-            console.log("something", error);
+            console.log("something", error); // try to avoid using generic messages like "something". Even if it's a placeholder, it's better to use a more descriptive message.
             return
         }
         else {
-            console.log("bla");
+            console.log("bla"); // delete console.log messages before deploying the app.
             setEditUsers({
                 Name: "",
                 faction: "",
@@ -43,6 +47,7 @@ function EditPage({ users, setUsers, getUsers, handleButtonClick, handleButtonCl
         }
     }
     useEffect(() => {
+      // good job with this icon logic. 👍
         if (editUsers.faction === "Insectoid") {
             setEditUsers((prevState) => ({
                 ...prevState,
