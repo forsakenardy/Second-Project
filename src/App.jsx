@@ -27,6 +27,7 @@ function App() {
   const [isPressed, setIsPressed] = useState(false);
   const [isPressed2, setIsPressed2] = useState(false);
   const [isPressed3, setIsPressed3] = useState(false);
+  
 
   const toggleClass = () => {
     setIsPressed((prevState) => !prevState);
@@ -180,7 +181,7 @@ function App() {
         toggleClass2()
         toggleClass3()
       }}
-        className={`${isPressed ? 'menu-displayed' : 'races-menu'} ${!isPressed2 ? 'hidden' : ''}`}
+        className={`${isPressed ? 'menu-displayed' : 'races-menu'} ${!isPressed2 ? 'hidden2' : ''}`}
       >
         <Link onClick={handleButtonClick4} to="/humanoid"><h3 className='races'>Humanoid</h3></Link>
         <Link onClick={handleButtonClick5} to="/insectoid"><h3 className='races'>Insectoid</h3></Link>
