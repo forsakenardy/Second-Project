@@ -1,7 +1,5 @@
   .user-page {
-    margin-top: 50px;
-    margin-bottom: 10px;
-    height: 70vh;
+    height: 77vh;
   }
 
   .user-table {
@@ -31,7 +29,7 @@
   }
 
   .user-card-content {
-    height: 56vh;
+    height: 60vh;
     overflow: auto;
   }
 
