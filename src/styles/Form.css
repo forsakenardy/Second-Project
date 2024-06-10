@@ -1,17 +1,17 @@
 .form-content {
     position: relative;
-    top: 15vh;
-    left: 34vw;
+    top: 5vh;
+    left: 50vw;
+    translate: -50%;
     width: 35vw;
     height: 70vh;
-    margin-bottom: 20vh;
-    background-image: url("https://i.ibb.co/qN5szdN/pngtree-screen-blue-technology-border-png-image-3846897-removebg-preview.png");
-  background-size: contain;
+    margin-bottom: 7vh;
   }
     .formulary {
       text-align: center;
       display: flex;
       flex-direction: column;
+      align-items: center;
   
       .label-name {
         position: relative;
@@ -33,7 +33,7 @@
       input {
         position: relative;
         top: 16vh;
-        left: 7.5VW;
+
         width: 300px;
         height: 30px;
       }
@@ -41,7 +41,6 @@
       .submit {
         position: relative;
         top: 19.5vh;
-        left: 9vw;
         width: 250px;
         height: 40px;
         cursor: pointer;
