@@ -23,10 +23,10 @@ function Users({ users, setUsers, handleButtonClick }) {
         <div className="user-page">
             <div className='user-card-content'>
                 <div className='user-table'>
-                    <h3>User</h3>
-                    <h3>Faction</h3>
-                    <h3>Type of User</h3>
-                    <h3>level</h3>
+                    <h3 className='h3-user'>User</h3>
+                    <h3 className='h3-faction'>Faction</h3>
+                    <h3 className='h3-type'>Type of User</h3>
+                    <h3 className='h3-lvl'>level</h3>
                 </div>
                 {
                     users.map((user) => {

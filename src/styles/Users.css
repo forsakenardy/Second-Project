@@ -5,11 +5,29 @@
   }
 
   .user-table {
-    margin-left: 132px;
-    width: 42vw;
+    width: 50vw;
+    margin-left: 2vw;
     display: flex;
     flex-direction: row;
-    gap: 142px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .h3-user {
+    min-width: 170px;
+    text-align: center;
+  }
+
+  .h3-faction {
+    width: 80px;
+  }
+
+  .h3-type {
+    width: 156px;
+  }
+
+  .h3-lvl {
+    width: 50px;
   }
 
   .user-card-content {
@@ -90,15 +108,39 @@
   }
 
   @media (max-width: 680px) {
+    .user-table {
+      width: 68vw;
+    }
     .user-faction {
       display: none;
     }
+
     .user-name {
       margin: 0 10px;
     }
+
     .user-lvl {
       margin: 0 10px;
+    } 
+
+    .h3-faction {
+      display: none;
+      font-size: 14px;
     }
-    .user-card {
+
+    .h3-lvl {
+      margin: 0 10px;
+      font-size: 14px;
+    }
+    .h3-user {
+     min-width: 135px;
+margin: 0 10px;
+font-size: 14px;
+    }
+    .h3-type {
+      font-size: 14px;
+    }
+    .user-card div {
+      width: 68vw;
     }
   }
