@@ -47,7 +47,7 @@ function ArmamentInfo({ armament, getArmament, handleButtonClick }) {
             <div key={weaponCard.id} className="humanoid-card">
                 <div className="div-armament">
                     <h1 className="character-name">{weaponCard.name}</h1>
-                    <ul className="info-card">
+                    <ul className="info-card2">
                         <li><h3>Type: {weaponCard.type}</h3></li>
                         <li><h3>Class: {weaponCard.class}</h3></li>
                         <li><h3>Attack Range: {weaponCard["attack range"]}</h3></li>

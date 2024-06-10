@@ -1,7 +1,6 @@
 .full-armament-page-2 {
   width: 98vw;
-  height: 85vh;
-  margin-top: 10vh;
+  height: 75vh;
 }
 
 .armament-info-buttons {
@@ -48,4 +47,21 @@
   font-size: 20px;
   min-height: 40px;
   min-width: 140px
+}
+
+@media (max-width: 680px) {
+  .prevnext {
+    min-width: 80px;
+  }
+  .buy {
+    margin-right: 30px;
+    min-width: 80px
+  }
+  .armament-info-buttons {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 22px;
+  }
 }
