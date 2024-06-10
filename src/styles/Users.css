@@ -1,6 +1,7 @@
   .user-page {
-    margin-top: 150px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    height: 70vh;
   }
 
   .user-table {
@@ -48,19 +49,22 @@
 
   .user-name {
     width: 80px;
+    font-size: 14px;
   }
 
   .user-class {
     width: 156px;
+    font-size: 14px;
   }
 
   .user-faction {
     width: 80px;
+    font-size: 14px;
   }
 
   .user-img {
     margin-left: 10px;
-    width: 50px;
+    width: 40px;
   }
 
   .user-lvl {
@@ -83,4 +87,18 @@
     height: 50px;
     border-radius: 10px;
     cursor: pointer;
+  }
+
+  @media (max-width: 680px) {
+    .user-faction {
+      display: none;
+    }
+    .user-name {
+      margin: 0 10px;
+    }
+    .user-lvl {
+      margin: 0 10px;
+    }
+    .user-card {
+    }
   }

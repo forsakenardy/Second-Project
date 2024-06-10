@@ -1,8 +1,8 @@
 .humanoid-card {
-  margin-top: 15vh;
+  margin-top: 5vh;
   margin-left: 1vw;
   width: 97vw;
-  height: 80vh;
+  height: 75vh;
   display: flex;
   flex-direction: row;
   align-items: center;
