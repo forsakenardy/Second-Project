@@ -53,3 +53,43 @@
 .info-card h3 {
   font-size: 20px;
 }
+
+@media (max-width: 680px) {
+
+  .humanoid-card {
+    margin-top: 3vh;
+    margin-left: 1vw;
+    width: 97vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 0;
+    gap: 0;
+    box-shadow: 0px 28px 45px -41px rgba(255, 255, 255, 1);
+  }
+  .humanoid-image {
+    height: 40vh;
+  }
+  .humanoid-card2 {
+    height:83vh;
+    width: 100vw;
+    overflow-x: auto;
+    display: flex;
+  }
+  .character-name {
+    font-size: 32px;
+  }
+  .info-card h2 {
+
+    font-size:18px;
+  }
+  .info-card h3 {
+    font-size: 12px;
+  }
+  .info-card {
+    height: 23vh;
+    width: 50vw;
+  }
+}

@@ -3,7 +3,7 @@ import "../styles/Humanoid.css"
 
 function Humanoid({ characters }) {
     return (
-        <>
+        <div className="humanoid-card2">
             {
                 characters.map((character) => {
                     return (
@@ -25,7 +25,9 @@ function Humanoid({ characters }) {
                 }
                 )
             }
-        </>
+        </div>
+
+
     )
 }
 

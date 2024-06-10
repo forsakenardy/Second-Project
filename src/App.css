@@ -11,17 +11,19 @@
   font-family: "Chakra Petch", sans-serif;
   font-style: normal;
   width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
   background-color: rgb(28, 28, 28);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-
 .navbar-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 96px;
+  margin-left: 2vw;
+}
+.hidden {
   display: flex;
   flex-direction: row;
   gap: 96px;
@@ -30,7 +32,7 @@
 
 .my-logo {
   height: 48px;
-  margin-right: 1.5vw;
+  margin-right: 2vw;
 }
 
 .NavBar h2 {
@@ -65,7 +67,7 @@
 
   position: relative;
   bottom: 0;
-  width: 100vw;
+  width: 96vw;
   background-color: rgb(28, 28, 28);
   text-align: start;
   display: flex;
@@ -110,6 +112,7 @@
   box-shadow: -8px 5px 15px -5px rgba(0, 0, 0, 0.6);
   animation-duration: 0.5s;
   animation-name: slidein;
+  z-index: 1;
 }
 
 @keyframes slidein {
@@ -148,4 +151,85 @@
   color: #fff;
   border-bottom: rgba(255, 255, 255, 0.639) solid 2px;
   padding-bottom: 5px;
+}
+.hamburguer-menu {
+  width: 60px;
+  height: 10vh;
+  display: none;
+}
+
+@media (max-width: 680px) {
+
+  .hamburguer-menu {
+    margin-left: 2vw;
+    width: 6vh;
+    height: 6vh;
+    display: block;
+  }
+
+.navbar-menu {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100vw;
+  height: 90vh;
+  flex-direction: column;
+  gap: 25px;
+  background-color:rgb(74, 73, 73);
+  padding-left: 2vw;
+  z-index: 1;
+  margin-left: 0;
+  animation-duration: 0.5s;
+  animation-name: slidein;
+}
+
+.menu-displayed {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  top: 35vh;
+  left: 0;
+  width: 100vw;
+  background-color: rgb(74, 73, 73);
+  box-shadow: -8px 5px 15px -5px rgba(0, 0, 0, 0.6);
+  animation-duration: 0.5s;
+  animation-name: slidein;
+  z-index: 1;
+}
+.hidden {
+  display: none;
+}
+@keyframes slidein {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100vw;
+  }
+}
+.races-button {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: rgb(74, 73, 73);
+  color: grey;
+  cursor: pointer;
+}
+
+.races-button-big {
+ margin-bottom: 200px;
+}
+.main-info {
+  width: 100VW;
+}
+
+
+
+
 }

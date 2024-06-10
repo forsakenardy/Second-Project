@@ -2,7 +2,7 @@ import supabase from "../supabase/config";
 
 function Insectoid({ insectoids }) {
     return (
-        <>
+        <div className="humanoid-card2">
             {
                 insectoids.map((insectoid) => {
                     return (
@@ -24,7 +24,8 @@ function Insectoid({ insectoids }) {
                 }
                 )
             }
-        </>
+        </div>
+
     )
 }
 
