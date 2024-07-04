@@ -1,6 +1,6 @@
 .full-armament-page-2 {
   width: 98vw;
-  height: 74vh;
+  height: 72vh;
 }
 
 .armament-info-buttons {
@@ -52,6 +52,12 @@
   overflow: auto;
   height: 35vh;
   width: 40vw;
+}
+.div-armament {
+  margin-top: -60px;
+}
+.armament-picture {
+  margin-top: -60px;
 }
 
 @media (max-width: 680px) {

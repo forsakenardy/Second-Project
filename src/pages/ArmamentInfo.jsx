@@ -73,7 +73,7 @@ function ArmamentInfo({ armament, getArmament, handleButtonClick }) {
                     </div>
 
                 </div>
-                <img className="humanoid-image" src={weaponCard.image} alt="imagen del Armamento" />
+                <img className="humanoid-image armament-picture" src={weaponCard.image} alt="imagen del Armamento" />
             </div>
         </div>
     );
