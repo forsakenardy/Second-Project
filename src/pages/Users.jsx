@@ -25,7 +25,7 @@ function Users({ users, setUsers, handleButtonClick }) {
                 <div className='user-table'>
                     <h3 className='h3-user'>User</h3>
                     <h3 className='h3-faction'>Faction</h3>
-                    <h3 className='h3-type'>Type of User</h3>
+                    <h3 className='h3-type'>Type</h3>
                     <h3 className='h3-lvl'>level</h3>
                 </div>
                 {
@@ -47,7 +47,7 @@ function Users({ users, setUsers, handleButtonClick }) {
                                 </div>
                                 <Link onClick={handleButtonClick} to={`/Users/${user.id}`} >
                                     <img
-                                        className="delete-user"
+                                        className="edit-user"
                                         src="https://i.ibb.co/PwhzHvD/edit.png"
                                         alt="edit"
                                     />
