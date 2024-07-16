@@ -61,6 +61,11 @@
 }
 
 @media (max-width: 680px) {
+
+  .full-armament-page-2 {
+    height: 74vh;
+  }
+  
   .prevnext {
     min-width: 80px;
   }
@@ -77,6 +82,12 @@
   }
   .info-card2 h3{
     font-size: 12px;
+  }
+  .armament-picture {
+    margin-top: 0;
+  }
+  .div-armament {
+    margin-top: -10px;
   }
   
 }

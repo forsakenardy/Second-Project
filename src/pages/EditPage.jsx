@@ -2,9 +2,8 @@ import { Link } from "react-router-dom";
 import supabase from "../supabase/config";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "../styles/Form2.css"
 
-function EditPage({ users, setUsers, getUsers, handleButtonClick, handleButtonClick3 }) {
+function EditPage({ getUsers, handleButtonClick, handleButtonClick3 }) {
     const { userId } = useParams();
     const [editUsers, setEditUsers] = useState({
         Name: "",
@@ -14,6 +13,24 @@ function EditPage({ users, setUsers, getUsers, handleButtonClick, handleButtonCl
         icon: ""
     });
 
+    useEffect(() => {
+        const fetchUserData = async () => {
+            const { data, error } = await supabase
+                .from('Users')
+                .select('*')
+                .eq('id', userId)
+                .single();
+
+            if (error) {
+                console.log("Error fetching user data:", error);
+            } else {
+                setEditUsers(data);
+            }
+        };
+
+        fetchUserData();
+    }, [userId]);
+
     const handleInputs = (e) => {
         const field = e.target.name;
         const value = e.target.value;
@@ -21,27 +38,24 @@ function EditPage({ users, setUsers, getUsers, handleButtonClick, handleButtonCl
             ...editUsers,
             [field]: value,
         });
-    }
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const { error } = await supabase.from('Users').update(editUsers).eq('id', userId);
+        const { error } = await supabase
+            .from('Users')
+            .update(editUsers)
+            .eq('id', userId);
+
         if (error) {
-            console.log("something", error);
-            return
+            console.log("Error updating user:", error);
+            return;
+        } else {
+            console.log("User updated successfully");
+            getUsers();
         }
-        else {
-            console.log("bla");
-            setEditUsers({
-                Name: "",
-                faction: "",
-                typeOfUser: "",
-                lvl: 1,
-                icon: "",
-            })
-            getUsers()
-        }
-    }
+    };
+
     useEffect(() => {
         if (editUsers.faction === "Insectoid") {
             setEditUsers((prevState) => ({
@@ -56,29 +70,29 @@ function EditPage({ users, setUsers, getUsers, handleButtonClick, handleButtonCl
         } else {
             setEditUsers((prevState) => ({
                 ...prevState,
-                icon: ""
+                icon: "https://i.ibb.co/qjKcLX3/usuario-removebg-preview.png"
             }));
         }
     }, [editUsers.faction]);
 
     return (
-        <div className="form2-content">
-            <form onSubmit={handleSubmit} className="formulary2">
-                <label className="label-name2" htmlFor="Name">Edit Profile</label>
-                <input onChange={handleInputs} placeholder="Edit User Name" name="Name" value={editUsers.Name} type="text" />
-                <label className="label-faction2" htmlFor="faction">
+        <div className="form-content">
+            <form onSubmit={handleSubmit} className="formulary">
+                <label className="label-name" htmlFor="Name">Edit Profile</label>
+                <input onChange={handleInputs} placeholder="Edit User Name" name="Name" value={editUsers.Name} type="text" maxLength="18" />
+                <label className="label-faction" htmlFor="faction">
                     <select onChange={handleInputs} name="faction" value={editUsers.faction}>
                         <option value="">-- None --</option>
                         <option value="Insectoid">Insectoid</option>
                         <option value="Humanoid">Humanoid</option>
                     </select>
                 </label>
-                <input onChange={handleInputs} placeholder="Edit Status" name="Class" value={editUsers.Class} type="text" />
-                <button onClick={handleButtonClick3} className="submit2" type="submit">Submit</button>
-                <Link onClick={handleButtonClick} to="/Users"><button className="back-back2">Go back</button></Link>
+
+                <button onClick={handleButtonClick3} className="submit" type="submit">Submit</button>
+                <Link onClick={handleButtonClick} to="/Users"><button className="back-back">Go back</button></Link>
             </form>
         </div>
-    )
+    );
 }
 
 export default EditPage;

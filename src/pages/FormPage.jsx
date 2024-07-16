@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import supabase from "../supabase/config";
 import "../styles/Form.css"
 
-function FormPage({ users, setUsers, getUsers, handleButtonClick, handleButtonClick3 }) {
+function FormPage({ getUsers, handleButtonClick, handleButtonClick3 }) {
     const [newUser, setNewUser] = useState({
         Name: "",
         faction: "",
@@ -57,7 +57,7 @@ function FormPage({ users, setUsers, getUsers, handleButtonClick, handleButtonCl
         } else {
             setNewUser((prevState) => ({
                 ...prevState,
-                icon: ""
+                icon: "https://i.ibb.co/qjKcLX3/usuario-removebg-preview.png"
             }));
         }
     }, [newUser.faction]);
@@ -66,7 +66,7 @@ function FormPage({ users, setUsers, getUsers, handleButtonClick, handleButtonCl
         <div className="form-content">
             <form onSubmit={handleSubmit} className="formulary">
                 <label className="label-name" htmlFor="Name">New User</label>
-                <input onChange={handleInputs} placeholder="Full Name" type="text" value={newUser.Name} name="Name" />
+                <input onChange={handleInputs} placeholder="Full Name" type="text" value={newUser.Name} name="Name" maxLength="18" required  />
                 <label className="label-faction" htmlFor="faction">
                     <select name="faction" value={newUser.faction} onChange={handleInputs}>
                         <option value="">-- None --</option>
