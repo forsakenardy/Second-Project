@@ -18,7 +18,6 @@ import insectsound from './assets/images/insect-sound.mp3'
 import logo from './assets/images/logo.png';
 
 
-
 function App() {
 
   const [users, setUsers] = useState([])
@@ -175,7 +174,7 @@ function App() {
           <NavLink onClick={handleButtonClick} to="/Store" className={({ isActive }) => isActive ? "selected" : ""}><h2>Store</h2></NavLink>
           <NavLink onClick={handleButtonClick} to="/Users" className={({ isActive }) => isActive ? "selected" : ""}><h2>Users</h2></NavLink>
         </div>
-        <img className='my-logo' src={logo} alt="Game Icon" />
+        <img className='my-logo' src=".\src\assets\images\logo.png" alt="Game Icon" />
       </section>
       <div onClick={() => {
         toggleClass()
