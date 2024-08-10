@@ -15,6 +15,7 @@ import menu from './assets/images/menu-display.mp3'
 import click2 from './assets/images/click2.mp3'
 import robotsound from './assets/images/robot-sound.mp3'
 import insectsound from './assets/images/insect-sound.mp3'
+import logo from './assets/images/logo.png';
 
 
 
@@ -174,7 +175,7 @@ function App() {
           <NavLink onClick={handleButtonClick} to="/Store" className={({ isActive }) => isActive ? "selected" : ""}><h2>Store</h2></NavLink>
           <NavLink onClick={handleButtonClick} to="/Users" className={({ isActive }) => isActive ? "selected" : ""}><h2>Users</h2></NavLink>
         </div>
-        <img className='my-logo' src="src\assets\images\logo.png" alt="Game Icon" />
+        <img className='my-logo' src={logo} alt="Game Icon" />
       </section>
       <div onClick={() => {
         toggleClass()
