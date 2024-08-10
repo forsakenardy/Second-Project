@@ -9,8 +9,6 @@ function Humanoid({ characters }) {
                 characters.map((character) => {
                     return (
                         <>
-                        <img src="src\assets\images\aegis.png" alt="" />
-                                                    <img className='my-logo' src={Aegis} alt="Game Icon" />
                             <div key={character.id} className="humanoid-card">
                                 <div>
                                     <h1 className="character-name">{character.name}</h1>
